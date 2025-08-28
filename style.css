@@ -1,0 +1,25 @@
+
+html, body{
+    height: 100%;
+    width: 100%;
+    font-family: 'inter', sans-serif;
+}
+
+:root {
+  /* Colors */
+  --hero-bg-instance: #000000;
+  --main-bg: #03060C;
+  --ctoa: #426b92;
+  --card-grad-bluish: #122128;
+  --card-grad-transparent: #070A11;
+  --text-light: #E5E7EB;
+  --text-muted: #9CA3AF;
+
+  /* Font sizes */
+  --fs-hero: 3vw;     /* big hero headline */
+  --fs-h2: 2rem;          /* section headings */
+  --fs-h3: 1.25rem;       /* step / card headings */
+  --fs-body: 1rem;        /* regular text */
+  --fs-small: 0.9rem;     /* muted / secondary text */
+  --fs-cta: 1.05rem;      /* CTA button text */
+}
