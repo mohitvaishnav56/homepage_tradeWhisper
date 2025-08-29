@@ -21,12 +21,12 @@
     /**
    * @desc Primary text color for headings and important text.
    */
-    --clr-text-primary: #E2E8F0;
+    --clr-text-primary: #ffffff;
 
     /**
    * @desc Secondary text color for paragraphs and less emphasized text.
    */
-    --clr-text-secondary: #d4d9e2;
+    --clr-text-secondary: #b8bcc4;
 
     /**
    * @desc Color for borders and dividers.
@@ -44,13 +44,14 @@
    */
     --fs-xxl: 3.5rem;
     /* ~56px */
-
+    
+    --fs-xlm: 2.8rem;
     /**
    * @desc Use for section titles (H2).
    */
     --fs-xl: 2.25rem;
     /* ~36px */
-
+    
     /**
    * @desc Use for card titles and subheadings (H3).
    */
@@ -105,9 +106,16 @@ body {
     font-size: var(--fs-xxl);
 }
 
+.heading-lg {
+  font-size: clamp(1.5rem, 4vw, 3rem); /* scales smoothly */
+  color: var(--clr-text-secondary);
+  line-height: 0.8;  /* default line height */
+  margin: 0.5rem 0;
+}
+
 @media (max-width: 992px) {
     .fs-hero{
-        font-size: 3.2rem;
+        font-size: 2.5rem;
     }
     .pt-10 {
         padding-top: 2rem !important;
