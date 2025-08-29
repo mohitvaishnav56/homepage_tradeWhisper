@@ -1,26 +1,116 @@
+:root {
+    /* ======================================== */
+    /* COLORS                    */
+    /* ======================================== */
 
-html, body{
-    height: 100%;
-    width: 100%;
-    font-family: 'inter', sans-serif;
+    /**
+   * @desc Main background color for the page.
+   */
+    --clr-background: #0A0D14;
+
+    /**
+   * @desc Background color for cards and elevated surfaces.
+   */
+    --clr-surface: #191E2A;
+
+    /**
+   * @desc Primary accent color for buttons, links, and highlights.
+   */
+    --clr-accent: #30E0A9;
+
+    /**
+   * @desc Primary text color for headings and important text.
+   */
+    --clr-text-primary: #E2E8F0;
+
+    /**
+   * @desc Secondary text color for paragraphs and less emphasized text.
+   */
+    --clr-text-secondary: #d4d9e2;
+
+    /**
+   * @desc Color for borders and dividers.
+   */
+    --clr-border: #2D3748;
 }
 
 :root {
-  /* Colors */
-  --card-grad: linear-gradient(204deg, rgba(68, 94, 91, 0.753) 3.26%, #0D0F13 44.75%);
-  --hero-bg-instance: #000000;
-  --main-bg: #03060C;
-  --ctoa: #426b92;
-  --card-grad-bluish: #122128;
-  --card-grad-transparent: #070A11;
-  --text-light: #E5E7EB;
-  --text-muted: #9CA3AF;
+    /* ======================================== */
+    /* FONT SIZES                  */
+    /* ======================================== */
 
-  /* Font sizes */
-  --fs-hero: 3vw;     /* big hero headline */
-  --fs-h2: 2rem;          /* section headings */
-  --fs-h3: 1.25rem;       /* step / card headings */
-  --fs-body: 1rem;        /* regular text */
-  --fs-small: 0.9rem;     /* muted / secondary text */
-  --fs-cta: 1.05rem;      /* CTA button text */
+    /**
+   * @desc Use for the main hero heading (H1).
+   */
+    --fs-xxl: 3.5rem;
+    /* ~56px */
+
+    /**
+   * @desc Use for section titles (H2).
+   */
+    --fs-xl: 2.25rem;
+    /* ~36px */
+
+    /**
+   * @desc Use for card titles and subheadings (H3).
+   */
+    --fs-lg: 1.5rem;
+    /* ~24px */
+
+    /**
+   * @desc Use for larger body text or prices.
+   */
+    --fs-md: 1.125rem;
+    /* ~18px */
+
+    /**
+   * @desc Base font size for body text and paragraphs.
+   */
+    --fs-base: 1rem;
+    /* ~16px */
+
+    /**
+   * @desc Use for smaller descriptive text or labels.
+   */
+    --fs-sm: 0.875rem;
+    /* ~14px */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.hover_nav_link {
+    color: var(--clr-text-primary) !important;
+    /* default color */
+    transition: color 0.3s ease;
+}
+
+.hover_nav_link:hover {
+    color: var(--clr-text-primary) !important;
+    font-weight: 600;
+    /* hover color */
+}
+
+.pt-10 {
+    padding-top: 6rem !important;
+    /* your own size */
+}
+
+.pt-7 {
+    padding-top: 4rem !important;
+}
+
+.fs-hero{
+    font-size: var(--fs-xxl);
+}
+
+@media (max-width: 992px) {
+    .fs-hero{
+        font-size: 3.2rem;
+    }
+    .pt-10 {
+        padding-top: 2rem !important;
+        /* your own size */
+    }
 }

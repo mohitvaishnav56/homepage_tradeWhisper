@@ -1,421 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100 w-100">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TradeWhisper | AI-Powered Market Insights</title>
+    <title>TradeWhisper</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
-<body class="bg-main-bg text-[var(--text-light)]">
-    <!-- /////////////////////////////////////////Hero Section starts///////////////////////////////////////// -->
-    <main class="w-full min-h-[80%] bg-main-bg bg-[url('./assets/images/Hero.png')] bg-no-repeat bg-cover">
+<body style="background: var(--clr-background);" class="text-white h-100 w-100">
 
-        <nav class="w-full h-[80px] px-4 sm:px-8 lg:px-24 flex items-center justify-between shadow-md">
-            <a href="/" class="text-2xl text-[var(--text-light)]">TradeWhisper</a>
-            <ul class="hidden md:flex gap-10 text-sm">
-                <li><a href="#"
-                        class="text-[var(--text-muted)] cursor-pointer hover:text-[var(--text-light)] transition-colors">Home</a>
-                </li>
-                <li><a href="#"
-                        class="text-[var(--text-muted)] cursor-pointer hover:text-[var(--text-light)] transition-colors">About</a>
-                </li>
-                <li><a href="#"
-                        class="text-[var(--text-muted)] cursor-pointer hover:text-[var(--text-light)] transition-colors">Pricing</a>
-                </li>
-                <li><a href="#"
-                        class="text-[var(--text-muted)] cursor-pointer hover:text-[var(--text-light)] transition-colors">FAQ</a>
-                </li>
-                <li><a href="#"
-                        class="text-[var(--text-muted)] cursor-pointer hover:text-[var(--text-light)] transition-colors">How
-                        it
-                        works</a></li>
-            </ul>
-            <button
-                class="p-2 text-[var(--fs-cta)] border-[var(--text-light)] border-[1px] text-[var(--text-light)] rounded-md cursor-pointer hover:bg-[var(--card-grad-bluish)] hover:scale-105 transition-transform">
-                Get Started
-            </button>
+
+
+
+
+    <main style="background: url('./assets/images/Hero.svg') no-repeat center center; background-size: cover;"
+        class="pb-5 w-100">
+
+        <!-- NavBar Component -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <!-- Logo -->
+                <a class="navbar-brand fw-bold text-white" href="#">
+                    TradeWhisper
+                </a>
+
+                <!-- Mobile Toggle -->
+                <button class="navbar-toggler border-0 p-1" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="text-white fs-3">☰</span> <!-- custom hamburger -->
+                </button>
+
+
+                <!-- Offcanvas Menu -->
+                <div style="background-color: var(--clr-background);" class="offcanvas offcanvas-end" tabindex="-1"
+                    id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title text-white" id="offcanvasNavbarLabel">TradeWhisper</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-center gap-2 flex-grow-1 pe-3">
+                            <li class="nav-item"><a class="nav-link hover_nav_link" href="#">Home</a></li>
+                            <li class="nav-item"><a class="nav-link hover_nav_link" href="#">About us</a></li>
+                            <li class="nav-item"><a class="nav-link hover_nav_link" href="#">Pricing</a></li>
+                            <li class="nav-item"><a class="nav-link hover_nav_link" href="#">FAQ</a></li>
+                            <li class="nav-item"><a class="nav-link hover_nav_link" href="#">How it works</a></li>
+                        </ul>
+
+                        <!-- Button -->
+                        <button class="btn btn-outline-light px-4">Get started</button>
+                    </div>
+                </div>
+            </div>
         </nav>
+        <!-- NavBar Component Ended Here -->
 
-        <section
-            class="w-full min-h-[400px] flex flex-col lg:flex-row items-center justify-between gap-8 px-4 sm:px-8 lg:px-24 py-16">
 
-            <section class="w-full lg:w-1/2">
-                <h1 style="font-size: var(--fs-hero);" class="text-[var(--text-light)] leading-tight font-bold">
+
+        <!-- Hero Component starts here -->
+        <div class="container d-flex flex-wrap pt-10">
+            <!-- Left Column -->
+            <div class="col-12 col-lg-6 ">
+                <h1 class="fw-bold fs-hero">
                     Hear the whispers before the market roars
                 </h1>
-                <p class="text-[var(--text-muted)] text-body mt-4 leading-relaxed">
+                <p style="color: var(--clr-text-secondary);">
                     AI-powered insights that cut through the noise. Discover trends, hidden signals, and strategies
                     before the crowd moves.
                 </p>
-                <button
-                    class="mt-8 flex items-center gap-3 p-3 text-[var(--fs-cta)] border-[var(--text-light)] border-[1px] text-[var(--text-light)] rounded-md cursor-pointer bg-[var(--ctoa)] hover:scale-105 transition-transform">
-                    <div class="flex items-center gap-2">
-                        <img src="./assets/icons/analysis.svg" alt="" aria-hidden="true">
-                        <span class="text-[var(--text-light)] font-semibold">Start Listing Now</span>
-                    </div>
-                    <img src="./assets/icons/arrow-right.svg" alt="" aria-hidden="true">
+                <button class="btn btn-info d-flex gap-2 px-4 py-2 text-white">
+                    <img src="./assets/icons/analysis.svg" alt="">
+                    Get started
+                    <img src="./assets/icons/arrow-right.svg" alt="">
                 </button>
-            </section>
-
-            <section class="w-full lg:w-[45%] flex flex-col justify-between self-stretch">
-                <div class="pt-4 flex justify-start lg:justify-end">
-                    <p class="w-full lg:w-[80%] text-[var(--text-muted)] text-body leading-relaxed">
-                        Instead of drowning in endless headlines, analyst opinions, and rumor-driven feeds,
-                        TradeWhispers delivers the most relevant updates directly to you. Our software filters out the
-                        noise and highlights the real signals that matter.
-                    </p>
-                </div>
-                <div class="w-full h-1/2 flex items-center justify-end">
-                    <div class="circleContainer hidden h-24 w-24 relative flex items-center justify-center">
-                    </div>
-                </div>
-            </section>
-
-        </section>
-    </main>
-    <!-- /////////////////////////////////////////Hero Section Ends///////////////////////////////////////// -->
-
-
-    <!-- /////////////////////////////////////////second Section/page Starts///////////////////////////////////////// -->
-    <section id="secondSection" class="w-full bg-[var(--main-bg)] p-6 ">
-        <div class="p-6 flex flex-col items-center m-auto gap-3">
-            <h1 class="text-3xl text-[var(--text-muted)]">Monthly <span
-                    class="text-[var(--text-light)]">flat-rate</span> subscription</h1>
-            <h1 class="text-3xl text-[var(--text-muted)]"><span class="text-[var(--text-light)]">Unlimited</span>
-                insights & strategies</h1>
-            <h1 class="text-3xl text-[var(--text-muted)]">Pause or cancel <span
-                    class="text-[var(--text-light)]">anytime</span></h1>
-        </div>
-    </section>
-    <!-- /////////////////////////////////////////second Section/page ends///////////////////////////////////////// -->
-
-
-
-
-    <!-- /////////////////////////////////////////third Section/page the how it works page starts///////////////////////////////////////// -->
-    <section id="thirdSection" class="w-full bg-[var(--main-bg)] p-24 ">
-        <h1 class="text-4xl text-[var(--text-light)]">How does it actually works ?</h1>
-        <div>
-            <div class="w-full flex items-start justify-between pt-[100px]">
-                <h1 class="text-3xl text-[var(--text-muted)]">
-                    01/
-                </h1>
-                <h1 class="w-[20%] font-bold text-xl text-[var(--text-light)]">
-                    Connect Your Trading Interests
-                </h1>
-                <h1 class="w-[30%] text-xl text-[var(--text-light)]">
-                    Tell us your markets, assets, or sectors of interest, and let our AI tune into the right data
-                    streams.
-                </h1>
-            </div>
-            <div class="w-full flex items-start justify-between pt-[100px]">
-                <h1 class="text-3xl text-[var(--text-muted)]">
-                    02/
-                </h1>
-                <h1 class="w-[20%] font-bold text-xl text-[var(--text-light)]">
-                    Select Your Trading Style & Mode
-                </h1>
-                <h1 class="w-[30%] text-xl text-[var(--text-light)]">
-                    Choose from short-term trading, swing, or long-term investing — we adapt insights to your style.
-                </h1>
-            </div>
-            <div class="w-full flex items-start justify-between pt-[100px]">
-                <h1 class="text-3xl text-[var(--text-muted)]">
-                    03/
-                </h1>
-                <h1 class="w-[20%] font-bold text-xl text-[var(--text-light)]">
-                    Generate & Customize Whispers
-                </h1>
-                <h1 class="w-[30%] text-xl text-[var(--text-light)]">
-                    Get real-time signals, curated strategies, and insights. Personalize alerts to match your risk
-                    profile.
-                </h1>
-            </div>
-            <div class="w-full flex items-start justify-between pt-[100px]">
-                <h1 class="text-3xl text-[var(--text-muted)]">
-                    04/
-                </h1>
-                <h1 class="w-[20%] font-bold text-xl text-[var(--text-light)]">
-                    Track, Learn & Grow
-                </h1>
-                <h1 class="w-[30%] text-xl text-[var(--text-light)]">
-                    Our AI continuously adapts to your behavior, helping you refine your edge over time.
-                </h1>
-            </div>
-        </div>
-    </section>
-    <!-- /////////////////////////////////////////third Section/page the how it works page end///////////////////////////////////////// -->
-
-
-    <!-- /////////////////////////////////////////fourth Section/page for plans started///////////////////////////////////////// -->
-    <section id="fourthSection" class="w-full bg-[var(--main-bg)] p-24">
-
-        <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold">Pricing plan that fits you</h2>
-            <p class="text-gray-400 mt-2">We provide a very simple and transparent pricing model</p>
-        </div>
-
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-6">
-
-            <!-- Basic Plan -->
-            <div style="background: var(--card-grad);"
-                class="rounded-xl border border-gray-800 p-8 shadow-lg hover:shadow-2xl transition">
-                <h3 class="text-xl font-semibold">Basic</h3>
-                <p class="text-3xl font-bold mt-4">$15<span class="text-lg font-normal">/month</span></p>
-                <p class="text-gray-400 mt-2">Best for Small Businesses</p>
-                <button class="w-full mt-6 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg">Get Started</button>
-
-                <div class="mt-8">
-                    <p class="text-sm text-gray-400 mb-2">What's included</p>
-                    <ul class="space-y-2 text-gray-300 text-sm">
-                        <li>✔ Basic reporting</li>
-                        <li>✔ Limited integrations</li>
-                        <li>✔ Email support</li>
-                    </ul>
-                </div>
             </div>
 
-            <!-- Premium Plan -->
-            <div style="background: var(--card-grad);"
-                class=" rounded-xl border border-emrald-500 p-8 shadow-lg hover:shadow-2xl transition relative">
-                <div
-                    class="absolute -top-3 left-1/2 -translate-x-1/2 bg-emerald-500 text-xs px-3 py-1 rounded-full font-medium">
-                    Popular</div>
-                <h3 class="text-xl font-semibold">Premium</h3>
-                <p class="text-3xl font-bold mt-4">$50<span class="text-lg font-normal">/month</span></p>
-                <p class="text-gray-400 mt-2">Best for Medium Businesses</p>
-                <button class="w-full mt-6 py-2 bg-emerald-500 hover:bg-emerald-600 rounded-lg">Get Started</button>
-
-                <div class="mt-8">
-                    <p class="text-sm text-gray-400 mb-2">What's included</p>
-                    <ul class="space-y-2 text-gray-300 text-sm">
-                        <li>✔ Advanced reporting</li>
-                        <li>✔ Unlimited integrations</li>
-                        <li>✔ Priority email support</li>
-                        <li>✔ API access</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Pro Plan -->
-            <div style="background: var(--card-grad);"
-                class=" rounded-xl border border-gray-800 p-8 shadow-lg hover:shadow-2xl transition">
-                <h3 class="text-xl font-semibold">Pro</h3>
-                <p class="text-3xl font-bold mt-4">$100<span class="text-lg font-normal">/month</span></p>
-                <p class="text-gray-400 mt-2">Best for Enterprise</p>
-                <button class="w-full mt-6 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg">Get Started</button>
-
-                <div class="mt-8">
-                    <p class="text-sm text-gray-400 mb-2">What's included</p>
-                    <ul class="space-y-2 text-gray-300 text-sm">
-                        <li>✔ Full analytics suite</li>
-                        <li>✔ Dedicated account manager</li>
-                        <li>✔ 24/7 priority support</li>
-                        <li>✔ Custom integrations</li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-    </section>
-    <!-- /////////////////////////////////////////fourth Section/page for plans ends///////////////////////////////////////// -->
-
-    <!-- ///////////////////////////////////////// Game Changing Features Section ///////////////////////////////////////// -->
-    <section class="w-full bg-[var(--main-bg)] px-24 pb-24">
-        <div class="w-full mx-auto">
-            <h2 class="text-4xl font-bold mb-10">Game changing features.</h2>
-
-            <div class="relative overflow-hidden">
-                <!-- Track -->
-                <div id="carouselTrack" class="w-full flex flex-wrap gap-8 justify-center duration-500">
-
-                    <!-- Feature Card -->
-                    <div
-                        class="min-w-[250px] sm:min-w-[280px] max-w-[300px] mr-5 p-6 rounded-xl shadow-lg feature-gradient">
-                        <h3 class="text-lg font-semibold mb-2">📡 Real-time Market Whispers</h3>
-                        <p class="text-gray-300 text-sm leading-relaxed">
-                            Get AI-curated trading signals and news the moment they surface. No more waiting for delayed
-                            reports.
-                        </p>
-                    </div>
-                    <div
-                        class="min-w-[250px] sm:min-w-[280px] max-w-[300px] mr-5 p-6 rounded-xl shadow-lg feature-gradient">
-                        <h3 class="text-lg font-semibold mb-2">📡 Real-time Market Whispers</h3>
-                        <p class="text-gray-300 text-sm leading-relaxed">
-                            Get AI-curated trading signals and news the moment they surface. No more waiting for delayed
-                            reports.
-                        </p>
-                    </div>
-                    <div
-                        class="min-w-[250px] sm:min-w-[280px] max-w-[300px] mr-5 p-6 rounded-xl shadow-lg feature-gradient">
-                        <h3 class="text-lg font-semibold mb-2">📡 Real-time Market Whispers</h3>
-                        <p class="text-gray-300 text-sm leading-relaxed">
-                            Get AI-curated trading signals and news the moment they surface. No more waiting for delayed
-                            reports.
-                        </p>
-                    </div>
-
-                    <!-- Feature Card -->
-                    <div
-                        class="min-w-[250px] sm:min-w-[280px] max-w-[300px] mr-5 p-6 rounded-xl shadow-lg feature-gradient">
-                        <h3 class="text-lg font-semibold mb-2">📰 Stock & Trade News Hub</h3>
-                        <p class="text-gray-300 text-sm leading-relaxed">
-                            Stay updated with breaking news across global markets, curated and summarized so you only
-                            see what matters.
-                        </p>
-                    </div>
-
-                    <!-- Feature Card -->
-                    <div
-                        class="min-w-[250px] sm:min-w-[280px] max-w-[300px] mr-5 p-6 rounded-xl shadow-lg feature-gradient">
-                        <h3 class="text-lg font-semibold mb-2">📊 Sentiment Scanner</h3>
-                        <p class="text-gray-300 text-sm leading-relaxed">
-                            Track shifts in investor sentiment from financial media, analyst reports, and social chatter
-                            to catch early market mood swings.
-                        </p>
-                    </div>
-
-                    <!-- Feature Card -->
-                    <div
-                        class="min-w-[250px] sm:min-w-[280px] max-w-[300px] mr-5 p-8 rounded-xl shadow-lg feature-gradient">
-                        <h3 class="text-lg font-semibold mb-2">⚡ Trend Radar</h3>
-                        <p class="text-gray-300 text-sm leading-relaxed">
-                            Discover hidden patterns and emerging trends across sectors, helping you anticipate moves
-                            before the crowd.
-                        </p>
-                    </div>
-
-                </div>
-
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ///////////////////////////////////////// Game Changing Features Section ends ///////////////////////////////////////// -->
-
-    <!-- ///////////////////////////////////////// Testimonials Section starts ///////////////////////////////////////// -->
-
-    <section class="w-full bg-[var(--main-bg)] p-24">
-        <div class="w-[70%] mx-auto relative">
-
-            <!-- Subtitle -->
-            <p class="text-teal-400 text-sm">✨ Loved by many worldwide</p>
-
-            <!-- Testimonial -->
-            <p class="text-2xl md:text-4xl font-medium text-white leading-relaxed ">
-                "I always wanted to change the style of my kitchen, but I didn't know where to start.
-                This tool is outstanding & usable for everyone"
-            </p>
-
-            <!-- User Info -->
-            <div class="flex w-full  justify-between">
-                <div class="flex items-center justify-center gap-3">
-                    <img src="https://i.pravatar.cc/40?img=3" alt="User" class="w-10 h-10 rounded-full">
-                    <div class="text-left">
-                        <h4 class="text-white font-semibold text-sm">Charlie Mendez</h4>
-                        <p class="text-gray-400 text-xs">Real Estate Agent</p>
-                    </div>
-                </div>
-
-                <!-- Controls -->
-                <div class="flex justify-center gap-4 mt-10">
-                    <button
-                        class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white">
-                        &#8592;
-                    </button>
-                    <button
-                        class="w-10 h-10 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 text-white">
-                        &#8594;
-                    </button>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ///////////////////////////////////////// Testimonials Section ends ///////////////////////////////////////// -->
-
-    <Section class="w-full p-24 flex justify-center bg-[var(--main-bg)]">
-        <div class="w-1/2 p-4 bg-[url(./assets/images/Hero.png)] bg-cover bg-center rounded-xl text-center  ">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">
-                Ready to trade smarter?
-            </h2>
-            <p class="text-gray-300 mb-8">
-                Stay ahead of the market with AI-powered whispers.
-                Get real-time stock insights, trade-related news, and trend alerts in seconds.
-            </p>
-
-            <!-- Button -->
-            <button
-                class="bg-teal-500 hover:bg-teal-600 text-white px-6 py-3 rounded-lg font-medium shadow-md transition flex items-center gap-2 mx-auto">
-                Start Listening Now 📈
-            </button>
-
-            <!-- Subtext -->
-            <p class="text-gray-400 text-sm mt-4">
-                Instant access — no credit card required.
-            </p>
-        </div>
-    </Section>
-
-    <footer class="w-full bg-[#010409]">
-        <div class="w-full flex justify-evenly items-start p-8 gap-8 border-b border-gray-800">
-            <div class="w-1/4">
-                <h1 class="text-2xl text-[var(--text-light)]">TradeWhisper</h1>
-                <p class="text-[var(--text-muted)] text-sm mt-4 leading-relaxed">
-                    AI-powered insights that cut through the noise. Discover trends, hidden signals, and strategies
-                    before the crowd moves.
+            <!-- Right Column -->
+            <div class="h-100 col-12 col-lg-6 pt-1">
+                <p class="w-50 mx-auto mx-lg-0 ms-lg-auto d-none d-md-block" style="font-size: var(--fs-sm);">
+                    Instead of drowning in endless headlines, analyst opinions, and rumor-driven feeds, TradeWhispers
+                    delivers the most relevant updates directly to you. Our software filters out the noise and
+                    highlights the real signals that matter.
                 </p>
             </div>
-            <div class="w-1/4 px-10">
-                <h1 class="text-2xl text-[var(--text-light)]">Quick Links</h1>
-                <ul class="mt-4 space-y-2 text-[var(--text-muted)] text-sm">
-                    <li><a href="#" class="hover:text-[var(--text-light)] transition-colors">Home</a></li>
-                    <li><a href="#" class="hover:text-[var(--text-light)] transition-colors">About</a></li>
-                    <li><a href="#" class="hover:text-[var(--text-light)] transition-colors">Pricing</a></li>
-                    <li><a href="#" class="hover:text-[var(--text-light)] transition-colors">FAQ</a></li>
-                    <li><a href="#" class="hover:text-[var(--text-light)] transition-colors">How it works</a></li>
-                </ul>
-            </div>
-            <div class="w-1/4 px-8">
-                <h1 class="text-2xl text-[var(--text-light)]">Legal</h1>
-                <ul class="mt-4 space-y-2 text-[var(--text-muted)] text-sm">
-                    <li><a href="#" class="hover:text-[var(--text-light)] transition-colors">Privacy Policy</a></li>
-                    <li><a href="#" class="hover:text-[var(--text-light)] transition-colors">Terms of Service</a></li>
-                    <li><a href="#" class="hover:text-[var(--text-light)] transition-colors">Cookie Policy</a></li>
-                    <li><a href="#" class="hover:text-[var(--text-light)] transition-colors">Disclaimer</a></li>
-                </ul>
-            </div>
-            <div class="w-1/4">
-                <h1 class="text-2xl text-[var(--text-light)]">Stay Connected</h1>
-                <h2 class="text-[var(--text-muted)] text-sm mt-4">Email:</h2>
-                <p class="text-[var(--text-muted)] text-sm mt-2">0o0o0@example.com</p>
-                <div>
-                    <h1 class="text-[var(--text-muted)] text-sm mt-4">Follow Us</h1>
-                    <div class="flex items-center gap-4 mt-2">
-                        <img src="./assets/icons/twitter-alt.svg" alt="">
-                        <img src="./assets/icons/linkedin.svg" alt="">
-                        <img src="./assets/icons/facebook.svg" alt="">
-                    </div>
-                </div>
-            </div>
         </div>
-        <div class="w-full text-center p-4 text-sm text-[var(--text-muted)]">
-            © 2025 TradeWhisper. All Rights Reserved. | Data powered by NSE/BSE.
-        </div>
-    </footer>
-    <!-- Font Awesome CDN for icons -->
-    <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
 
-    <!-- Custom Gradient Style -->
-    <style>
-        .feature-gradient {
-            background: linear-gradient(204deg, rgba(68, 94, 91, 0.753) 3.26%, #0D0F13 44.75%);
-        }
-    </style>
+        <!-- Hero Component will end here -->
 
+
+
+
+
+    </main>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
