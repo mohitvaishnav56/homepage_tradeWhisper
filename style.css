@@ -16,7 +16,7 @@
     /**
    * @desc Primary accent color for buttons, links, and highlights.
    */
-    --clr-accent: #30E0A9;
+    --clr-accent: #007BFF;
 
     /**
    * @desc Primary text color for headings and important text.
@@ -32,6 +32,8 @@
    * @desc Color for borders and dividers.
    */
     --clr-border: #2D3748;
+
+    --clr-grd: linear-gradient(204deg, rgba(68, 94, 91, 0.18) 3.26%, #131b2b 44.75%);
 }
 
 :root {
@@ -116,6 +118,21 @@ body {
 .pb-10 {
     padding-bottom: 7rem !important;
     /* your own size */
+}
+
+#rotatingText {
+    animation: rotation 10s infinite linear;
+}
+
+
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @media (max-width: 992px) {

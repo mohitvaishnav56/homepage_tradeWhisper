@@ -10,14 +10,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="background: var(--clr-background);" class="text-white h-100 w-100">
+<body style="background: var(--clr-background); overflow-x: hidden;" class="text-white h-100 w-100">
 
 
 
 
 
-    <main style=" background: url('./assets/images/Hero.svg') no-repeat center center; background-size: cover;"
+    <main
+        style="position: relative; background: url('./assets/images/Hero.svg') no-repeat center center; background-size: cover; height: 90%;"
         class="pb-5 pb-10 w-100">
+
 
         <!-- NavBar Component -->
         <nav class="navbar navbar-expand-lg">
@@ -60,8 +62,6 @@
         </nav>
         <!-- NavBar Component Ended Here -->
 
-
-
         <!-- Hero Component starts here -->
         <div class="container d-flex flex-wrap pt-10">
             <!-- Left Column -->
@@ -77,7 +77,7 @@
                     before the crowd moves.
                 </p>
 
-                <button class="btn btn-info d-flex gap-2 px-4 py-2 text-white">
+                <button style="background: var(--clr-accent);" class="btn d-flex gap-2 px-4 py-2 text-white">
                     <img src="./assets/icons/analysis.svg" alt="">
                     Start Listening Out
                     <img src="./assets/icons/arrow-right.svg" alt="">
@@ -92,6 +92,17 @@
                     delivers the most relevant updates directly to you. Our software filters out the noise and
                     highlights the real signals that matter.
                 </p>
+
+                <div style="position: absolute; bottom: 0; right: 0;" class="w-100 d-flex justify-content-end ">
+                    <div style="width: 200px; height: 200px;; position: relative;"
+                        class="d-flex align-items-center justify-content-center">
+                        <img id="rotatingText" class="w-100 h-100" src="./assets/images/rotatingText.svg"
+                            style="object-fit: cover; position:absolute; top:0; left:0" alt="Hero Image">
+                        <button id="tip" style="width: 50px; height: 50px;" class="btn btn-dark rounded-circle">
+                            <img src="./assets/icons/newspaper.svg" alt="">
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
         <!-- Hero Component will end here -->
@@ -128,7 +139,7 @@
 
     <!-- How-it-works-section-component starts -->
     <section class=" w-100 container d-flex flex-column align-items-center pt-10 pb-5 gap-5">
-                <h1 style="color: var(--clr-text-primary); font-size: var(--fs-xl);" class="w-100 heading-lg">
+                <h1 style="color: var(--clr-text-primary); font-size: var(--fs-xlm);" class="w-100 heading-lg">
                     How does it works ?
                 </h1>
 
@@ -187,8 +198,123 @@
     <!-- How-it-works-section-component ends -->
 
 
+    <section class="w-100 container " style="padding: 40px 20px;">
+  <h1 style="color: var(--clr-text-primary); font-size: var(--fs-xlm);" class="w-100 text-center ">
+    Pricing plans that fits you
+  </h1>
+  <h4 style="color: var(--clr-text-secondary); font-size: var(--fs-md);" class="w-100 text-center mt-3">
+    We provide a very flexible and simple pricing model
+  </h4>
+
+  <div class="pricing-container" 
+       style="display: grid; gap: 24px; margin-top: 40px;
+              grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+              font-family: 'Inter', sans-serif;">
+
+    <!-- Basic Plan -->
+    <div class="pricing-card"
+      style="background: var(--clr-grd); border: 1px solid var(--clr-border); border-radius: 16px; padding: 32px;">
+      <h2 style="font-size: 20px; font-weight: 600; margin-bottom: 16px;">Basic</h2>
+      <h1 style="font-size: 32px; font-weight: 800; margin-bottom: 16px;">
+        $15<span style="font-size: 16px; font-weight: 400;">/month</span>
+      </h1>
+      <p style="color: var(--clr-text-secondary); margin-bottom: 24px;">
+        Perfect for beginner traders who want to explore smart trading insights.
+      </p>
+
+      <button
+        style="width: 100%; padding: 12px; background: #0f0f0f; border: none; border-radius: 8px; font-weight: 600; color: #fff; margin-bottom: 12px;">
+        Get Started
+      </button>
+      <a href="#"
+        style="display: block; text-align: center; font-size: 14px; color: var(--clr-text-secondary); margin-bottom: 24px;">
+        Book a call for more details
+      </a>
+
+      <hr style="border: none; border-top: 1px solid var(--clr-border); margin: 24px 0;">
+
+      <h4 style="font-weight: 600; margin-bottom: 12px;">What's included:</h4>
+      <ul style="list-style: none; padding: 0; margin: 0; color: var(--clr-text-secondary); line-height: 1.8;">
+        <li>100 trading signals / month</li>
+        <li>Real-time market alerts</li>
+        <li>Access to 5 stock categories</li>
+        <li>Mobile & Web dashboard</li>
+        <li>Basic analytics</li>
+      </ul>
+    </div>
+
+    <!-- Premium Plan (Highlighted) -->
+    <div class="pricing-card"
+      style="background: var(--clr-grd); border: 1px solid var(--clr-accent); border-radius: 16px; padding: 32px;">
+      <h2 style="font-size: 20px; font-weight: 600; margin-bottom: 16px;">Premium</h2>
+      <h1 style="font-size: 32px; font-weight: 800; margin-bottom: 16px;">
+        $50<span style="font-size: 16px; font-weight: 400;">/month</span>
+      </h1>
+      <p style="color: var(--clr-text-secondary); margin-bottom: 24px;">
+        Best for active traders looking for in-depth market analysis and faster execution.
+      </p>
+
+      <button
+        style="width: 100%; padding: 12px; background: var(--clr-accent); border: none; border-radius: 8px; font-weight: 600; color: #fff; margin-bottom: 12px;">
+        Get Started
+      </button>
+      <a href="#"
+        style="display: block; text-align: center; font-size: 14px; color: var(--clr-text-secondary); margin-bottom: 24px;">
+        Book a call for more details
+      </a>
+
+      <hr style="border: none; border-top: 1px solid var(--clr-border); margin: 24px 0;">
+
+      <h4 style="font-weight: 600; margin-bottom: 12px;">What's included:</h4>
+      <ul style="list-style: none; padding: 0; margin: 0; color: var(--clr-text-secondary); line-height: 1.8;">
+        <li>500 trading signals / month</li>
+        <li>Real-time AI-driven alerts</li>
+        <li>Unlimited stock categories</li>
+        <li>Priority support</li>
+        <li>Advanced analytics & charting</li>
+      </ul>
+    </div>
+
+    <!-- Pro Plan -->
+    <div class="pricing-card"
+      style="background: var(--clr-grd); border: 1px solid var(--clr-border); border-radius: 16px; padding: 32px;">
+      <h2 style="font-size: 20px; font-weight: 600; margin-bottom: 16px;">Pro</h2>
+      <h1 style="font-size: 32px; font-weight: 800; margin-bottom: 16px;">
+        $100<span style="font-size: 16px; font-weight: 400;">/month</span>
+      </h1>
+      <p style="color: var(--clr-text-secondary); margin-bottom: 24px;">
+        Tailored for professional traders, hedge funds, and investment teams and organizations.
+      </p>
+
+      <button
+        style="width: 100%; padding: 12px; background: #0f0f0f; border: none; border-radius: 8px; font-weight: 600; color: #fff; margin-bottom: 12px;">
+        Get Started
+      </button>
+      <a href="#"
+        style="display: block; text-align: center; font-size: 14px; color: var(--clr-text-secondary); margin-bottom: 24px;">
+        Book a call for more details
+      </a>
+
+      <hr style="border: none; border-top: 1px solid var(--clr-border); margin: 24px 0;">
+
+      <h4 style="font-weight: 600; margin-bottom: 12px;">What's included:</h4>
+      <ul style="list-style: none; padding: 0; margin: 0; color: var(--clr-text-secondary); line-height: 1.8;">
+        <li>1500 trading signals / month</li>
+        <li>AI-driven multi-asset insights (stocks, crypto, forex)</li>
+        <li>Personalized trading strategies</li>
+        <li>API integration for custom tools</li>
+        <li>Team dashboard access</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
