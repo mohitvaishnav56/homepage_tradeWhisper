@@ -42,7 +42,7 @@
     /**
    * @desc Use for the main hero heading (H1).
    */
-    --fs-xxl: 3.5rem;
+    --fs-xxl: 3rem;
     /* ~56px */
     
     --fs-xlm: 2.8rem;
@@ -73,7 +73,7 @@
     /**
    * @desc Use for smaller descriptive text or labels.
    */
-    --fs-sm: 0.875rem;
+    --fs-sm: 0.880rem;
     /* ~14px */
 }
 
@@ -113,10 +113,16 @@ body {
   margin: 0.5rem 0;
 }
 
+.pb-10 {
+    padding-bottom: 7rem !important;
+    /* your own size */
+}
+
 @media (max-width: 992px) {
     .fs-hero{
         font-size: 2.5rem;
     }
+
     .pt-10 {
         padding-top: 2rem !important;
         /* your own size */
@@ -125,5 +131,9 @@ body {
     .pb-10 {
         padding-bottom: 3rem !important;
         /* your own size */
+    }
+
+    .w-md-fit{
+        width: fit-content !important;
     }
 }
