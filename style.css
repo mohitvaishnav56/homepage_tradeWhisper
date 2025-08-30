@@ -135,6 +135,10 @@ body {
     }
 }
 
+#corouser #slide{
+    transition: margin .8s ease-in-out;
+}
+
 @media (max-width: 992px) {
     .fs-hero{
         font-size: 2.5rem;
@@ -156,5 +160,16 @@ body {
 
     .hidden{
         display: none !important;
+    }
+
+    .w-md-slide{
+        width: 200% !important;
+    }
+
+    .flex-md-center{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
