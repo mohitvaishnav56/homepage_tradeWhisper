@@ -153,4 +153,8 @@ body {
     .w-md-fit{
         width: fit-content !important;
     }
+
+    .hidden{
+        display: none !important;
+    }
 }
