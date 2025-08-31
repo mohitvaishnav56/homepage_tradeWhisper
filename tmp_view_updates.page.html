@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        color: gainsboro;
+      }
+      body {
+        font-weight: lighter;
+        margin: 0;
+      }
+      #bg-color {
+        background-color: black;
+      }
+      #container-color {
+        background-color: black;
+      }
+      .content {
+        height: calc(100vh - 56px);
+        overflow-y: auto;
+      }
+      .sidebar a {
+        color: white;
+        text-decoration: none;
+        padding: 8px 0;
+        font-size: 14px;
+        font-weight: 200;
+        display: block;
+      }
+      .sidebar a:hover {
+        background-color: #2C2C2C;
+        color: white;
+      }
+
+      .card:hover {
+        border-color: gainsboro !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav id="bg-color" class="navbar border-bottom border-dark navbar-expand-lg">
+      <div class="container-fluid">
+        <span
+          class="navbar-brand mb-0"
+          style="font-weight: normal; color: gainsboro;"
+          >TradeWhisper</span
+        >
+
+        <!-- Toggler (mobile only) -->
+        <button
+          class="navbar-toggler text-secondary border-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasSidebar"
+          aria-controls="offcanvasSidebar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Offcanvas Sidebar -->
+        <div
+          class="offcanvas offcanvas-start text-bg-dark"
+          tabindex="-1"
+          id="offcanvasSidebar"
+        >
+          <div class="offcanvas-header border-bottom border-secondary">
+            <h5 class="offcanvas-title">Menu</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body sidebar">
+            <a href="#" class="mb-2">View Updates</a>
+            <a href="#" class="mb-2">Profile</a>
+            <a href="#" class="mb-2">Logout</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container-fluid content">
+      <div class="row h-100">
+        <!-- Sidebar (lg+) -->
+        <div
+          id="bg-color"
+          class="col-lg-2 d-none d-lg-flex flex-column border-end border-dark py-4 sidebar"
+        >
+          <a  style="padding-left: 20px;" href="#" class="text-secondary text-decoration-none mb-2"
+            >View Updates</a
+          >
+          <a style="padding-left: 20px;"  href="#" class="text-secondary text-decoration-none mb-2"
+            >Profile</a
+          >
+          <a style="padding-left: 20px;"  href="#" class="text-secondary text-decoration-none mb-2"
+            >Logout</a
+          >
+        </div>
+
+        <!-- Right Content -->
+        <div id="bg-color" class="col-lg-10 col-12 text-white p-4">
+          <!-- Top Header -->
+          <div class="row mt-3">
+            <h3>Company Announcements</h3>
+            <p>Latest news and filings from the market. Data is simulated.</p>
+          </div>
+
+          <!-- Filters -->
+          <div class="row g-2 mt-1">
+            <div class="col-md-6">
+              <select
+                id="companyFilter"
+                class="form-select bg-black text-secondary border border-secondary fw-light"
+              >
+                <option value="All">All Companies</option>
+                <option value="Reliance">Reliance</option>
+                <option value="TCS">TCS</option>
+                <option value="HDFC Bank">HDFC Bank</option>
+                <option value="Infosys">Infosys</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <select
+                id="sectorFilter"
+                class="form-select bg-black text-secondary border border-secondary fw-light"
+              >
+                <option value="All">All Sectors</option>
+                <option value="IT Services">IT Services</option>
+                <option value="Banking">Banking</option>
+                <option value="Conglomerate">Conglomerate</option>
+              </select>
+            </div>
+          </div>
+
+          <hr class="text-secondary opacity-25 mt-5 mb-4" />
+
+          <!-- Responsive Cards -->
+          <div class="row g-3">
+            <div class="col-lg-6 col-12">
+              <div
+                id="container-color"
+                class="card text-white border border-dark p-3 h-100"
+              >
+                <div class="card-body">
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-1"
+                  >
+                    <div>
+                      <h5 class="mb-0 fw-light">#15 State Bank of India</h5>
+                      <small class="text-secondary fw-bold">NSE: SBIN.NS</small>
+                    </div>
+                    <small class="text-secondary">2024-08-29T11:00:00Z</small>
+                  </div>
+                  <h6 class="card-title text-light fw-medium lh-sm">
+                    <a
+                      href="#"
+                      style="color: gainsboro;"
+                      class="text-decoration-none"
+                      >SBI to launch a new digital banking platform</a
+                    >
+                  </h6>
+                  <p class="card-text text-secondary mt-2">
+                    SBI has announced a fully integrated digital banking
+                    platform with enhanced security, instant loans, and wealth
+                    tools.
+                  </p>
+                  <a
+                    href="#"
+                    style="color: gainsboro;"
+                    class="mt-2 d-inline-block fw-light text-decoration-none"
+                    >Read More &rarr;</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-12">
+              <div
+                id="container-color"
+                class="card text-white border border-dark p-3 h-100"
+              >
+                <div class="card-body">
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-1"
+                  >
+                    <div>
+                      <h5 class="mb-0 fw-light">#23 Reliance Industries</h5>
+                      <small class="text-secondary fw-bold">NSE: RELIANCE.NS</small>
+                    </div>
+                    <small class="text-secondary">2024-08-30T09:30:00Z</small>
+                  </div>
+                  <h6 class="card-title text-light fw-medium lh-sm">
+                    <a
+                      href="#"
+                      style="color: gainsboro;"
+                      class="text-decoration-none"
+                      >Reliance announces new green energy initiative</a
+                    >
+                  </h6>
+                  <p class="card-text text-secondary mt-2">
+                    Reliance will invest ₹75,000 crore into renewable energy
+                    projects over the next 5 years, boosting India’s green
+                    transition.
+                  </p>
+                  <a
+                    href="#"
+                    style="color: gainsboro;"
+                    class="mt-2 d-inline-block fw-light text-decoration-none"
+                    >Read More &rarr;</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 col-12">
+              <div
+                id="container-color"
+                class="card text-white border border-dark p-3 h-100"
+              >
+                <div class="card-body">
+                  <div
+                    class="d-flex justify-content-between align-items-center mb-1"
+                  >
+                    <div>
+                      <h5 class="mb-0 fw-light">#31 Infosys</h5>
+                      <small class="text-secondary fw-bold">NSE: INFY.NS</small>
+                    </div>
+                    <small class="text-secondary">2024-08-28T15:45:00Z</small>
+                  </div>
+                  <h6 class="card-title text-light fw-medium lh-sm">
+                    <a
+                      href="#"
+                      style="color: gainsboro;"
+                      class="text-decoration-none"
+                      >Infosys partners with global fintech startup</a
+                    >
+                  </h6>
+                  <p class="card-text text-secondary mt-2">
+                    Infosys has entered into a partnership to co-develop
+                    blockchain-based solutions for secure financial transactions.
+                  </p>
+                  <a
+                    href="#"
+                    style="color: gainsboro;"
+                    class="mt-2 d-inline-block fw-light text-decoration-none"
+                    >Read More &rarr;</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- End Cards -->
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
