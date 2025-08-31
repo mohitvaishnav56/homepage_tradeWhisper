@@ -318,64 +318,250 @@
 
 
     <!-- features-section-component starts -->
-<section class="container-fluid py-5">
-  <div class="row align-items-start">
-    
-    <!-- Left Side -->
-    <div style="padding-left: 8%;" class="col-12 col-md-4 mb-4 flex-md-center mb-md-0 pt-4">
-      <h1 class="fs-1 fw-bold mb-5">Game changing <br> features.</h1>
-      <div class="d-flex gap-3">
-        <span id="prev" class="d-flex justify-content-center align-items-center rounded-circle"
-          style="height: 50px; width: 50px; background: var(--clr-grd); cursor: pointer;">
-          <img class="h-50 w-50" src="./assets/icons/arrow-left-line.svg" alt="Prev">
-        </span>
-        <span id="next" class="d-flex justify-content-center align-items-center rounded-circle"
-          style="height: 50px; width: 50px; background: var(--clr-grd); cursor: pointer;">
-          <img class="h-50 w-50" src="./assets/icons/arrow-right-line.svg" alt="Next">
-        </span>
+    <section class="container-fluid py-5">
+        <div class="row align-items-start">
+
+            <!-- Left Side -->
+            <div style="padding-left: 8%;" class="col-12 col-md-4 mb-4 flex-md-center mb-md-0 pt-4">
+                <h1 class="fs-1 fw-bold mb-5">Game changing <br> features.</h1>
+                <div class="d-flex gap-3">
+                    <span id="prev" class="d-flex justify-content-center align-items-center rounded-circle"
+                        style="height: 50px; width: 50px; background: var(--clr-grd); cursor: pointer;">
+                        <img class="h-50 w-50" src="./assets/icons/arrow-left-line.svg" alt="Prev">
+                    </span>
+                    <span id="next" class="d-flex justify-content-center align-items-center rounded-circle"
+                        style="height: 50px; width: 50px; background: var(--clr-grd); cursor: pointer;">
+                        <img class="h-50 w-50" src="./assets/icons/arrow-right-line.svg" alt="Next">
+                    </span>
+                </div>
+            </div>
+
+            <!-- Right Side (Carousel-like structure) -->
+            <div id="corouser" class="col-12 col-md-8 d-flex overflow-hidden">
+
+                <!-- Slide 1 -->
+                <div class="p-3 d-flex w-md-slide flex-shrink-0 w-100 gap-3" id="slide">
+                    <div class="p-3 flex-fill d-flex flex-column align-items-start"
+                        style="background: var(--clr-grd); border-radius: 20px;">
+                        <img class="mb-4" style="height: 50px; width: 50px;" src="./assets/icons/store-3-line.svg"
+                            alt="">
+                        <h3 class="h5">Real-time Market Trends</h3>
+                        <p>Track live market shifts and spot emerging opportunities instantly.</p>
+                    </div>
+                    <div class="p-3 flex-fill d-flex flex-column align-items-start"
+                        style="background: var(--clr-grd); border-radius: 20px;">
+                        <img class="mb-4" style="height: 40px; width: 40px;" src="./assets/icons/analysis.svg" alt="">
+                        <h3 class="h5">Smart Analytics</h3>
+                        <p>AI-powered insights that help you make better trading decisions.</p>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="p-3 d-flex w-md-slide flex-shrink-0 w-100 gap-3" id="slide">
+                    <div class="p-3 flex-fill d-flex flex-column align-items-start"
+                        style="background: var(--clr-grd); border-radius: 20px;">
+                        <img class="mb-4" style="height: 50px; width: 50px;" src="./assets/icons/p2p-line.svg" alt="">
+                        <h3 class="h5">Global Community</h3>
+                        <p>Connect with traders worldwide, share strategies, and grow together.</p>
+                    </div>
+                    <div class="p-3 flex-fill d-flex flex-column align-items-start"
+                        style="background: var(--clr-grd); border-radius: 20px;">
+                        <img class="mb-4" style="height: 40px; width: 40px;" src="./assets/icons/shield-line.svg"
+                            alt="">
+                        <h3 class="h5">Trusted & Secure</h3>
+                        <p>Your data and trades are protected with enterprise-grade security.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- features-section-component ends -->
+
+
+
+
+
+    <!-- testimonials-section-component starts -->
+    <section class="container w-100 pt-10 ">
+  <h6 class="d-flex align-items-center">
+    <img style="height: 30px;width: 30px;" src="./assets/icons/bubble-chart-fill.svg" alt="">
+    Loved by many worldwide
+  </h6>
+
+  <div class="w-100 position-relative d-flex justify-content-center align-items-start">
+    <div id="testimonialWrapper" style="overflow: hidden;">
+      <!-- Testimonials -->
+      <div class="testimonial active">
+        <h1>"I was overwhelmed by all the stock and forex apps, but this platform made it simple. The alerts are
+          clear and the news feed keeps me updated instantly."</h1>
+        <div style="height: 50px;" class=" d-flex gap-3 align-items-center">
+          <img style="height: 50px; width: 50px; border-radius: 100%; object-fit: cover; object-position: top;"
+            src="https://i.pinimg.com/736x/bf/51/df/bf51df83e5cc29345100da7770c68c63.jpg" alt="">
+          <div style="height: 30px;;">
+            <h4 style="font-size: var(--fs-md); line-height: 0.5;">John Doe</h4>
+            <p style="font-size: var(--fs-sm); color: var(--clr-text-secondary);">CEO, XYZ Company</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial" style="display:none;">
+        <h1>"Finally found a trading app that’s actually easy to use. The interface is clean and I don’t miss
+          important updates anymore."</h1>
+        <div style="height: 50px;" class=" d-flex gap-3 align-items-center">
+          <img style="height: 50px; width: 50px; border-radius: 100%; object-fit: cover; object-position: top;"
+            src="https://i.pinimg.com/736x/ba/33/63/ba3363a19ffc9b1dd0ea3d230a879747.jpg" alt="">
+          <div style="height: 30px;;">
+            <h4 style="font-size: var(--fs-md); line-height: 0.5;">Jane Smith</h4>
+            <p style="font-size: var(--fs-sm); color: var(--clr-text-secondary);">Trader</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial" style="display:none;">
+        <h1>"The real-time news alerts helped me make faster decisions. Highly recommend this app to anyone in
+          trading."</h1>
+        <div style="height: 50px;" class=" d-flex gap-3 align-items-center">
+          <img style="height: 50px; width: 50px; border-radius: 100%; object-fit: cover; object-position: top;"
+            src="https://i.pinimg.com/736x/7c/e3/78/7ce378e02f813f5b166083ca11a17079.jpg" alt="">
+          <div style="height: 30px;;">
+            <h4 style="font-size: var(--fs-md); line-height: 0.5;">Michael Lee</h4>
+            <p style="font-size: var(--fs-sm); color: var(--clr-text-secondary);">Financial Analyst</p>
+          </div>
+        </div>
       </div>
     </div>
 
-    <!-- Right Side (Carousel-like structure) -->
-    <div id="corouser" class="col-12 col-md-8 d-flex overflow-hidden">
-      
-      <!-- Slide 1 -->
-      <div class="p-3 d-flex w-md-slide flex-shrink-0 w-100 gap-3" id="slide">
-        <div class="p-3 flex-fill d-flex flex-column align-items-start"
-          style="background: var(--clr-grd); border-radius: 20px;">
-          <img class="mb-4" style="height: 50px; width: 50px;" src="./assets/icons/store-3-line.svg" alt="">
-          <h3 class="h5">Real-time Market Trends</h3>
-          <p>Track live market shifts and spot emerging opportunities instantly.</p>
-        </div>
-        <div class="p-3 flex-fill d-flex flex-column align-items-start"
-          style="background: var(--clr-grd); border-radius: 20px;">
-          <img class="mb-4" style="height: 40px; width: 40px;" src="./assets/icons/analysis.svg" alt="">
-          <h3 class="h5">Smart Analytics</h3>
-          <p>AI-powered insights that help you make better trading decisions.</p>
-        </div>
-      </div>
-
-      <!-- Slide 2 -->
-      <div class="p-3 d-flex w-md-slide flex-shrink-0 w-100 gap-3" id="slide">
-        <div class="p-3 flex-fill d-flex flex-column align-items-start"
-          style="background: var(--clr-grd); border-radius: 20px;">
-          <img class="mb-4" style="height: 50px; width: 50px;" src="./assets/icons/community.svg" alt="">
-          <h3 class="h5">Global Community</h3>
-          <p>Connect with traders worldwide, share strategies, and grow together.</p>
-        </div>
-        <div class="p-3 flex-fill d-flex flex-column align-items-start"
-          style="background: var(--clr-grd); border-radius: 20px;">
-          <img class="mb-4" style="height: 40px; width: 40px;" src="./assets/icons/shield.svg" alt="">
-          <h3 class="h5">Trusted & Secure</h3>
-          <p>Your data and trades are protected with enterprise-grade security.</p>
-        </div>
-      </div>
-
+    <!-- Controls -->
+    <div style="bottom: 0; right: 0;" class="d-flex gap-3 position-absolute">
+      <span id="prevRev" class="d-flex justify-content-center align-items-center rounded-circle"
+        style="height: 50px; width: 50px; background: var(--clr-grd); cursor: pointer;">
+        <img class="h-50 w-50" src="./assets/icons/arrow-left-line.svg" alt="Prev">
+      </span>
+      <span id="nextRev" class="d-flex justify-content-center align-items-center rounded-circle"
+        style="height: 50px; width: 50px; background: var(--clr-grd); cursor: pointer;">
+        <img class="h-50 w-50" src="./assets/icons/arrow-right-line.svg" alt="Next">
+      </span>
     </div>
   </div>
 </section>
 
-    <!-- features-section-component ends -->
+
+    <!-- testimonials-section-component ends -->
+
+
+
+
+
+    <!-- inspiration-section-component starts -->
+ <section class="container pt-10 pb-5 d-flex align-items-center justify-content-center">
+  <div class="p-5 text-center"
+    style="background: linear-gradient(160deg, rgba(20,25,30,0.9), rgba(30,35,40,0.95)); 
+           border-radius: 16px; 
+           max-width: 700px; 
+           width: 100%;
+           box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+           position: relative;
+           overflow: hidden;">
+           
+    <!-- Light gradient lines (like image background effect) -->
+    <div style="position:absolute; inset:0; 
+                background: repeating-linear-gradient(
+                  20deg, 
+                  rgba(255,255,255,0.05) 0px, 
+                  rgba(255,255,255,0.05) 1px, 
+                  transparent 1px, 
+                  transparent 60px
+                );
+                border-radius: 16px;">
+    </div>
+
+    <!-- Content -->
+    <div style="position:relative; z-index:2;">
+      <h1 style="font-size: var(--fs-xl); margin-bottom: 16px; color: #fff;">
+        Ready to get started?
+      </h1>
+      <p style="font-size: var(--fs-sm); color: #cfd8dc; max-width: 500px; margin: auto;">
+        Stay ahead of the markets with AI-driven insights. Let TradeWhisper bring you real-time stock updates, trends, and signals in seconds.
+      </p>
+
+      <button style="background: var(--clr-accent); 
+                     margin: 24px auto 8px auto; 
+                     border-radius: 8px;
+                     font-weight: 500;" 
+              class="btn d-flex align-items-center justify-content-center gap-2 px-4 py-2 text-white">
+        <img src="./assets/icons/analysis.svg" alt="">
+        Start Listening Out Now
+        <img src="./assets/icons/arrow-right.svg" alt="">
+      </button>
+
+      <small style="color:#90a4ae; display:block; margin-top: 4px;">
+        It’s free! No credit card required.
+      </small>
+    </div>
+  </div>
+</section>
+
+    <!-- inspiration-section-component ends -->
+
+
+    <footer class="container-fluid pt-5 pb-3" style="background: #0f0f0f; color: #ccc;">
+  <div class="container d-flex flex-wrap justify-content-between pb-4" style="border-bottom: 1px solid #333;">
+    
+    <!-- Brand -->
+    <div style="flex: 1 1 200px; margin-bottom: 20px;">
+      <h2 style="color:#fff; font-weight:700;">
+        Trade<span style="color:#1e88e5;">Whisper</span>
+      </h2>
+      <p style="max-width: 250px; color: #aaa; font-size: 14px;">
+        Where markets whisper, traders listen. Smarter stock tracking made simple.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div style="flex: 1 1 150px; margin-bottom: 20px;">
+      <h5 style="color:#fff; margin-bottom: 10px;">Quick Links</h5>
+      <ul style="list-style:none; padding:0; margin:0; line-height: 2;">
+        <li><a href="#" style="color:#bbb; text-decoration:none;">Home</a></li>
+        <li><a href="#" style="color:#bbb; text-decoration:none;">Dashboard</a></li>
+        <li><a href="#" style="color:#bbb; text-decoration:none;">Plans</a></li>
+        <li><a href="#" style="color:#bbb; text-decoration:none;">FAQs</a></li>
+        <li><a href="#" style="color:#bbb; text-decoration:none;">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Legal -->
+    <div style="flex: 1 1 150px; margin-bottom: 20px;">
+      <h5 style="color:#fff; margin-bottom: 10px;">Legal</h5>
+      <ul style="list-style:none; padding:0; margin:0; line-height: 2;">
+        <li><a href="#" style="color:#bbb; text-decoration:none;">Terms & Conditions</a></li>
+        <li><a href="#" style="color:#bbb; text-decoration:none;">Privacy Policy</a></li>
+        <li><a href="#" style="color:#bbb; text-decoration:none;">Disclaimer</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div style="flex: 1 1 200px; margin-bottom: 20px;">
+      <h5 style="color:#fff; margin-bottom: 10px;">Stay Connected</h5>
+      <p style="font-size: 14px; margin-bottom: 8px;">
+        <span style="color:#90caf9;">Email:</span> <br>
+        support@tradeWhisper.com
+      </p>
+      <div class="d-flex gap-3">
+        <a href="#"><img src="./assets/icons/twitter-alt.svg" alt="Twitter" style="height:24px;"></a>
+        <a href="#"><img src="./assets/icons/linkedin.svg" alt="LinkedIn" style="height:24px;"></a>
+        <a href="#"><img src="./assets/icons/facebook.svg" alt="Facebook" style="height:24px;"></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom strip -->
+  <div class="container text-center pt-3" style="font-size: 14px; color:#888;">
+    © 2025 TradeWhisper. All Rights Reserved. | Data powered by NSE/BSE.
+  </div>
+</footer>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
